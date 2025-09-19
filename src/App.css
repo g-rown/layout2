@@ -6,8 +6,8 @@
     gap: 10px;
     padding: 35px;
     background-color: #c7efc7; 
-    border: 10px solid #238000;
-    gap: 35px;
+    border: 8px solid #238000;
+    gap: 30px;
 }
 
 .row1 {
@@ -16,28 +16,31 @@
     gap: 20px;
     padding: 30px;
     background-color: #add8e6;
-    border: 10px solid #2101fe;
+    border: 8px solid #2101fe;
 }
 
-    .r1-col1, .r1-col3 {
+    .r1-sides {
         flex: 1;
         background-color: #fcdab9;
-        border: 10px solid #f78072;
+        border: 8px solid #f78072;
     }
 
-    .r1-col2  {
+    .r1-center {
         display: flex;
         flex-direction: row;
         flex: 1;
         background-color: #fcdab9;
-        border: 10px solid #f78072;
+        border: 8px solid #f78072;
         padding: 10px;
     }
 
-        .r1-col2-left, .r1-col2-right {
+        .r1-contents {
             flex: 1;
-            border: 10px solid #f40105;
+            border: 8px solid #f40105;
             background-color: #fac0cb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
 .row3 {
@@ -46,19 +49,22 @@
     gap: 20px;
     padding: 20px;
     background-color: #add8e6;
-    border: 10px solid #2101fe;
+    border: 8px solid #2101fe;
 }
 
-    .r3-col1, .r3-col4{
+    .r3-sides{
         flex: 3;
         background-color: #e2deff;
-        border: 10px solid #6a5acd;
+        border: 8px solid #6a5acd;
     }
 
-    .r3-col2, .r3-col3  {
-        flex: 1;
+    .r3-center  {
+        flex: 2;
         background-color: #fcdab9;
-        border: 10px solid #f78072;
+        border: 8px solid #f78072;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 
@@ -73,13 +79,9 @@
 		display: flex;
 		flex-direction: column;
 		flex: 3;
+        background: #fabbbb;
+        border: 8px solid #a94741;
 	}
-
-		.r2-lf-col1 {
-			flex: 3;  
-			background: #fabbbb;
-            border: 10px solid #a94741;
-		}
 
 	.right {
 		display: flex;
@@ -88,13 +90,8 @@
         gap: 20px;
 	}
 
-		.r2-rg-row1, .r2-rg-row2 {
+		.r2-rg-top, .r2-rg-bottom {
 			flex: 1; 
 			background: #fabbbb;
-            border: 10px solid #a94741;
+            border: 8px solid #a94741;
 		}
-
-
-
-
-

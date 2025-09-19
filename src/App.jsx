@@ -1,42 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function Row1Sides() {
+    return <div className="r1-sides"></div>
+}
 
+function Row1Center() {
+    return <div className="r1-center">
+        <Row1CenterContents name = "Ronian" />
+        <Row1CenterContents name = "Gulles" />
+    </div>
+}
+
+function Row1CenterContents(props) {
+    return <div className="r1-contents">{props.name}</div>
+}
+
+function Row1() {
+    return <div className="row1">
+        <Row1Sides />
+        <Row1Center />
+        <Row1Sides />
+    </div>
+}
+
+function Row2() {
+    return <div className="row2">
+        <div className="left"></div>
+
+        <div className="right">
+            <div className="r2-rg-top"></div>
+            <div className="r2-rg-bottom"></div>
+        </div>
+    </div>
+}
+
+function Row3Sides() {
+  return <div className="r3-sides"></div>;
+}
+function Row3Center(props) {
+  return <div className="r3-center">{props.text}</div>;
+}
+
+function Row3() {
+  return <div className="row3">
+    <Row3Sides />
+    <Row3Center text="C-PCIT9"/>
+    <Row3Center text="IT3A"/>
+    <Row3Sides />
+  </div>;
+}
+
+function App() {
   return (
     <>
     <div className="container">
-
-      <div className="row1">
-        <div className="r1-col1"></div>
-        <div className="r1-col2">
-          <div className="r1-col2-left"></div>
-          <div className="r1-col2-right"></div>
-        </div>
-        <div className="r1-col3"></div>
-      </div>
-
-      <div className="row2">
-          <div className="left">
-            <div className="r2-lf-col1"></div>
-          </div>
-
-          <div className="right">
-            <div className="r2-rg-row1"></div>
-            <div className="r2-rg-row2"></div>
-          </div>
-      </div>
-
-    <div className="row3">
-      <div className="r3-col1"></div>
-      <div className="r3-col2"></div>
-      <div className="r3-col3"></div>
-      <div className="r3-col4"></div>
+        <Row1 />
+        <Row2 />
+        <Row3 />
     </div>
-  </div>
     </>
   )
 }
